@@ -11,24 +11,29 @@ body {
 }
 
 header {
-    background-color: #2E7D32; /* Color verde selva */
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #2E7D32;
+    padding: 10px 20px;
 }
 
 header ul {
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
 header ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 header ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .section-inicio {
@@ -64,3 +69,9 @@ footer a img {
     width: 30px;
     margin: 0 10px;
 }
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
