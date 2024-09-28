@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #2E7D32; /* Color verde selva */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section-inicio {
+    background: url('tu-imagen.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #004d40; /* Verde oscuro */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #a5d6a7; /* Verde claro */
+}
+
+.section-sobremi, .section-proyectos, .section-blog, .section-contacto {
+    padding: 40px;
+    text-align: center;
+    background-color: #f1f8e9; /* Fondo verde suave */
+    color: #2E7D32;
+}
+
+footer {
+    background-color: #2E7D32;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a img {
+    width: 30px;
+    margin: 0 10px;
+}
