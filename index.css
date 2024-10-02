@@ -10,12 +10,14 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f5f5f5;
+    padding: 0;
+    margin: 0;
 }
 
 /* Header */
 header {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     background-color: #2E7D32;
     padding: 10px 20px;
@@ -44,71 +46,86 @@ header ul li a {
     font-weight: bold;
 }
 
+/* Dropdown de Idiomas */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    background-color: #2E7D32;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #1B5E20;
+}
+
 /* Sección Inicio */
 .section-inicio {
-    background: url('./public/images/mural-1.jpg') no-repeat center center/cover;
+    background: url('./public/images/corriendo.jpeg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
-    background-color: #004d40; /* Verde oscuro */
+    background-color: #004d40;
 }
 
 .hero h1 {
     font-size: 3rem;
-    color: #a5d6a7; /* Verde claro */
+    color: #a5d6a7;
 }
 
 /* Sección Sobre Mí */
-.section-sobremi, .section-contacto {
+.section-sobremi {
     padding: 40px;
-    text-align: center;
-    background-color: #f1f8e9; /* Fondo verde suave */
+    background-color: #f1f8e9;
     color: #2E7D32;
 }
 
-/* Sección Proyectos */
-#proyectos {
-    padding: 40px;
-    background-color: #e8f5e9;
-    text-align: center;
-}
-
-#proyectos h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #2E7D32;
-}
-
-/* Galería Horizontal para Proyectos */
-.horizontal-gallery {
+.about-me-content {
     display: flex;
-    overflow-x: auto; /* Permite el desplazamiento horizontal */
-    gap: 15px;
-    padding: 20px;
+    align-items: center;
+    gap: 20px;
 }
 
-.horizontal-gallery img {
-    width: 300px;
-    height: auto;
+.yna-photo {
+    max-width: 200px;
     border-radius: 8px;
-    transition: transform 0.3s ease;
 }
 
-.horizontal-gallery img:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-/* Estilos para la barra de desplazamiento (scroll) */
-.horizontal-gallery::-webkit-scrollbar {
-    height: 10px;
-}
-
-.horizontal-gallery::-webkit-scrollbar-thumb {
-    background-color: #2E7D32;
-    border-radius: 10px;
+#sobremi-text {
+    max-width: 600px;
+    font-size: 1.2rem;
 }
 
 /* Sección Blog */
@@ -118,13 +135,10 @@ header ul li a {
 }
 
 #blog h2 {
+    text-align: center;
     margin-bottom: 20px;
     font-size: 2rem;
     color: #2E7D32;
-}
-
-#blog p {
-    margin-bottom: 15px;
 }
 
 /* Footer */
@@ -144,4 +158,41 @@ footer a img {
 .logo {
     width: 150px;
     height: auto;
+}
+
+/* Media Queries para dispositivos móviles, tablets, y pantallas grandes */
+
+/* Para pantallas pequeñas como móviles */
+@media screen and (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .yna-photo {
+        max-width: 100px;
+    }
+
+    #sobremi-text {
+        font-size: 1rem;
+    }
+}
+
+/* Para pantallas grandes (monitores 29" y más grandes) */
+@media screen and (min-width: 1200px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .yna-photo {
+        max-width: 300px;
+    }
+
+    #sobremi-text {
+        font-size: 1.5rem;
+    }
 }
