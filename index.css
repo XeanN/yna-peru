@@ -100,11 +100,6 @@ header ul li a {
     background-color: #004d40;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    color: #a5d6a7;
-}
-
 /* Sección Sobre Mí */
 .section-sobremi {
     padding: 40px;
@@ -116,6 +111,8 @@ header ul li a {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap; /* Flex para pantallas pequeñas */
+    justify-content: center;
 }
 
 .yna-photo {
@@ -126,6 +123,7 @@ header ul li a {
 #sobremi-text {
     max-width: 600px;
     font-size: 1.2rem;
+    text-align: justify;
 }
 
 /* Sección Blog */
@@ -179,6 +177,10 @@ footer a img {
 
     #sobremi-text {
         font-size: 1rem;
+    }
+
+    .about-me-content {
+        flex-direction: column;
     }
 }
 
